@@ -39,7 +39,7 @@
             </header>
             
             
-            <section class="main-text">
+            <section class="main-text" >
                 <div class="top-left" data-aos="fade-right"  data-aos-duration="1500">
                     <p>Lerner Research Institute</p>
                 </div>
@@ -48,7 +48,7 @@
                 </div>
             </section>
         </div>
-        <section id="introductionPage">
+        <section id="introductionPage" data-tilt>
             <div class="introText">
                 <div class="intro-top-text" data-aos="fade-right"  data-aos-duration="1000">
                     <p>LRICS is comprised of 21 information technology specialists<br> 
@@ -68,16 +68,7 @@
 
 
 
-            <div class="introIcon" data-aos="zoom-in" data-aos-duration="2000">
-                <script src="https://cdn.lordicon.com/lordicon.js"></script>
-                    <lord-icon
-                        src="https://cdn.lordicon.com/okdadkfx.json"
-                        trigger="loop"
-                        delay="2000"
-                        colors="primary:#000000,secondary:#16c72e"
-                        style="width:500px;height:500px">
-                    </lord-icon>
-            </div>
+            
             
         </section>
 
@@ -87,6 +78,13 @@
 
 
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    
+    
+    <script src="jquery.js" ></script> <!-- Load jQuery first -->
+    <script src="tilt.js"></script> <!-- Load Tilt.js library -->
+    <script src="tilt.jquery.js"></script>
 
 
 
@@ -103,7 +101,7 @@
     touchControls: true,
     gyroControls: false,
     minHeight: 100.00,
-    minWidth: 500.00,
+    minWidth: 100.00,
     scale: 1.00,
     scaleMobile: 1.00,
     color: 0x5f056,
@@ -139,6 +137,31 @@
     window.edit_page.Event.subscribe( "Page.beforeNewOneFadeIn", setVanta )
     })
     </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
+
+    <script src="three.r134.min.js"></script>
+    <script src="vanta.globe.min.js"></script>
+    <script>
+    VANTA.GLOBE({
+    el: "#introductionPage",
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: false,
+    minHeight: 200.00,
+    minWidth: 200.00,
+    scale: 1.00,
+    scaleMobile: 1.00,
+    size: 0.40,
+    color: 0x5f056,
+    backgroundColor: 0x12201,
+    color2: 0xe300,
+    })
+    </script>
+    
+
+
     
 </body>
 </html>

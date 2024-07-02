@@ -41,6 +41,71 @@ header .left-side a{
 header .left-side a:hover{
     color: aliceblue;
 }
+
+
+
+
+header .left-side {
+    position: relative;
+}
+
+header .left-side a {
+    padding: 14px;
+    padding-bottom: 0.5em;
+    padding-top: 0.5em;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: rgb(39, 223, 33);
+    border: none;
+    background-color: transparent;
+    transition: 0.3s;
+}
+
+header .left-side a::after {
+    content: '';
+    background-color: rgb(39, 223, 33);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 10%;
+    height: 5%;
+    transition: 0.3s;
+}
+
+header .left-side a::before {
+    content: '';
+    background-color: rgb(39, 223, 33);
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10%;
+    height: 5%;
+    transition: 0.3s;
+}
+
+header .left-side a:hover {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px rgb(39, 223, 33),
+        0 0 40px rgb(39, 223, 33), 0 0 50px rgb(39, 223, 33), 0 0 60px rgb(39, 223, 33), 0 0 70px rgb(39, 223, 33);
+}
+
+header .left-side a:hover::after {
+    width: 100%;
+}
+
+header .left-side a:hover::before {
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
 header .right-side{
     display: flex;
     margin-right: 2em;
@@ -61,6 +126,59 @@ header .right-side .welcomeList{
 }
 
 
+
+
+
+header .right-side {
+    position: relative;
+}
+
+header .right-side a {
+    padding: 14px;
+    padding-bottom: 0.5em;
+    padding-top: 0.5em;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: rgb(39, 223, 33);
+    border: none;
+    background-color: transparent;
+    transition: 0.3s;
+}
+
+header .right-side a::after {
+    content: '';
+    background-color: rgb(39, 223, 33);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 10%;
+    height: 5%;
+    transition: 0.3s;
+}
+
+header .right-side a::before {
+    content: '';
+    background-color: rgb(39, 223, 33);
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10%;
+    height: 5%;
+    transition: 0.3s;
+}
+
+header .right-side a:hover {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px rgb(39, 223, 33),
+        0 0 40px rgb(39, 223, 33), 0 0 50px rgb(39, 223, 33), 0 0 60px rgb(39, 223, 33), 0 0 70px rgb(39, 223, 33);
+}
+
+header .right-side a:hover::after {
+    width: 100%;
+}
+
+header .right-side a:hover::before {
+    width: 100%;
+}
 
 
 
@@ -104,22 +222,29 @@ header .right-side .welcomeList{
 #introductionPage{
     height: 100vh;
     max-width: 100%;
-    background-color: #011a07;
+    background-color: #012201;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
+
 }
 .introText{
    color: white;
+   padding-left: 10em;
+   
 }
 .intro-top-text{
     padding-bottom: 4em;
+    
 }
 .intro-top-text p{
     font-size: 3em;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 1em;
     font-style: italic;
+    
+    
+    
 }
 .intro-bottom-text{
 
@@ -128,9 +253,13 @@ header .right-side .welcomeList{
     font-size: 1.9em;
     font-weight: 200;
     line-height: 1.3em;
+    background-color: rgb(27, 27, 27);
+    padding: 1em .8em;
+    display: inline-block;
 }
 span{
     color: rgb(0, 218, 54);
+    font-weight: 400;
 }
 span:hover{
     border-bottom: 1px solid rgb(0, 218, 54);
