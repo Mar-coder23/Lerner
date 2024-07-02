@@ -1,0 +1,150 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+#main-container{
+    height: 100vh;
+    max-width: 100%;
+    
+}
+#main-img{
+    height: 100vh;
+    max-width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+header{
+    height: 5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    scroll-behavior: smooth;
+    
+}
+
+header .left-side {
+   display: flex;
+   margin-left: 2em;
+
+}
+header .left-side a{
+    padding: 1.2em;
+    text-decoration: none;
+    color: rgb(9, 248, 69);
+    transition: .2s;
+    font-weight: 500;
+    font-size: 1.1em;
+}
+header .left-side a:hover{
+    color: aliceblue;
+}
+header .right-side{
+    display: flex;
+    margin-right: 2em;
+}
+header .right-side a{
+    padding: 1em;
+    text-decoration: none;
+    color: rgb(9, 248, 69);
+    transition: .2s;
+    font-weight: 500;
+    font-size: 1.1em;
+}
+header .right-side a:hover{
+    color: aliceblue;
+}
+header .right-side .welcomeList{
+    color: white;
+}
+
+
+
+
+
+
+.main-text{
+    height: 73vh;
+}
+.top-left{
+    height: 36vh;
+    margin-top: 10em;
+    margin-left: 10em;
+}
+.top-left p{
+    color:  rgb(0, 218, 54);
+    font-size: 6em;
+    font-family: "Oswald", sans-serif;
+    background-color: black;
+    display: inline;
+    padding: .1em .4em;
+    border-radius: 75px;
+    
+}
+.bottom-right{
+    height: 40vh;
+    margin-left: 56em;
+}
+.bottom-right p{
+    color: white;
+    font-size: 6em;
+    text-transform: uppercase;
+    font-family: "Oswald", sans-serif;
+    background-color: black;
+    display: inline;
+    padding: .1em .4em;
+    border-radius: 75px;
+}
+
+
+
+
+#introductionPage{
+    height: 100vh;
+    max-width: 100%;
+    background-color: #011a07;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.introText{
+   color: white;
+}
+.intro-top-text{
+    padding-bottom: 4em;
+}
+.intro-top-text p{
+    font-size: 3em;
+    font-weight: 300;
+    line-height: 1em;
+    font-style: italic;
+}
+.intro-bottom-text{
+
+}
+.intro-bottom-text p{
+    font-size: 1.9em;
+    font-weight: 200;
+    line-height: 1.3em;
+}
+span{
+    color: rgb(0, 218, 54);
+}
+span:hover{
+    border-bottom: 1px solid rgb(0, 218, 54);
+    cursor: pointer;
+}
+
+
+
+.introIcon{
+   
+}  
+
+
+
+
+
+

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LRI Computing Services</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div id="main-container">
+        <div id="main-img">
+            
+        
+            <header>
+                <div class="left-side">
+                    <a href="index.html"><p class="home">Home</p></a>
+                    <a href="#"><p class="team">Our Team</p></a>
+                </div>
+                <div class="right-side">
+                    <a href="index.html"><p class="welcomeList">Welcome</p></a>
+                    <a href="#introductionPage"><p class="introductionList">Introduction</p></a>
+                    <a href="#"><p class="supportList">Support</p></a>
+                    <a href="#"><p class="servicesList">Services</p></a>
+                    <a href="#"><p class="statsList">Stats</p></a>
+                </div>
+            </header>
+            
+            
+            <section class="main-text">
+                <div class="top-left" data-aos="fade-right"  data-aos-duration="1500">
+                    <p>Lerner Research Institute</p>
+                </div>
+                <div class="bottom-right" data-aos="fade-left"  data-aos-duration="1500">
+                    <p>Computing Services</p>
+                </div>
+            </section>
+        </div>
+        <section id="introductionPage">
+            <div class="introText">
+                <div class="intro-top-text" data-aos="fade-right"  data-aos-duration="1000">
+                    <p>LRICS is comprised of 21 information technology specialists<br> 
+                        providing server support, special project support and custom<br>
+                        support of the desktop in biomedical and clinical research.</p>
+                </div>
+                <div class="intro-bottom-text" data-aos="fade-up" data-aos-duration="1000">
+                    <p>The combined supported user base is greater than 2,000.
+                        Platforms supported<br> include Windows, Macintosh and 
+                        the Unix / Linux operating systems. The server<br>
+                        environment, housed in the Cleveland Clinic Tier III
+                        data center, is monitored<br> continuously by automated
+                        systems implemented at the enterprise level and<br> 
+                        specifically within the Lerner Research Institute <span>read more</span>.</p>
+                </div>
+            </div>
+
+
+
+            <div class="introIcon" data-aos="zoom-in" data-aos-duration="2000">
+                <script src="https://cdn.lordicon.com/lordicon.js"></script>
+                    <lord-icon
+                        src="https://cdn.lordicon.com/okdadkfx.json"
+                        trigger="loop"
+                        delay="2000"
+                        colors="primary:#000000,secondary:#16c72e"
+                        style="width:500px;height:500px">
+                    </lord-icon>
+            </div>
+            
+        </section>
+
+
+
+
+
+
+    </div>
+
+
+
+    <script src="app.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <script src="three.r134.min.js"></script>
+    <script src="vanta.net.min.js"></script>
+    <script>
+    VANTA.NET({
+    el: "#main-container",
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: false,
+    minHeight: 100.00,
+    minWidth: 500.00,
+    scale: 1.00,
+    scaleMobile: 1.00,
+    color: 0x5f056,
+    backgroundColor: 0x12201
+    })
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.topology.min.js"></script>
+    <script>
+    var setVanta = ()=>{
+    if (window.VANTA) window.VANTA.TOPOLOGY({
+    el: ".top-left",
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: false,
+    minHeight: 200.00,
+    minWidth: 200.00,
+    scale: 1.00,
+    scaleMobile: 1.00
+    })
+    }
+    _strk.push(function() {
+    setVanta()
+    window.edit_page.Event.subscribe( "Page.beforeNewOneFadeIn", setVanta )
+    })
+    </script>
+    
+</body>
+</html>
