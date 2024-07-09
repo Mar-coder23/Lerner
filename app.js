@@ -11,4 +11,17 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+let emergencyBtn = document.getElementById('emergencyBtn');
+let hiddenBox = document.getElementById('emergency-hidden');
 
+emergencyBtn.addEventListener('click', function(){
+    hiddenBox.style.display = 'block';
+});
+
+console.log(emergencyBtn);
+
+let exitBtn = document.getElementById('exitBtn');
+
+exitBtn.addEventListener('click', function(){
+    hiddenBox.style.display = 'none';
+});

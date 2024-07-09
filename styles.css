@@ -605,3 +605,26 @@ span:hover{
 }
 
 /* End of support page */
+
+
+
+#emergency-hidden{
+    position: absolute;
+    z-index: 1;
+    top: 30%;
+    left: 20%;
+    height: 30em;
+    width: 40em;
+    background-color: rgb(6, 112, 38);
+    display: none;
+}
+#emergency-hidden button{
+    margin: .1em;
+    padding: .3em .9em;
+    font-size: 1.4em;
+    float: right;
+    background-color: black;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
