@@ -3,6 +3,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: "Roboto Condensed", sans-serif;
+    
 }
 
 /* Start of Main Container */
@@ -10,25 +11,24 @@
 #main-container{
     height: 100vh;
     max-width: 100%;
-    
-}
-#main-img{
-    height: 100vh;
-    max-width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
 /* Start of Header Section */
 
+#firstPage{
+    z-index: 1000;
+}
 header{
     height: 5em;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     scroll-behavior: smooth;
+    z-index: 1002;
+    position: fixed;
 }
-header .left-side {
+header .left-side{
    display: flex;
    margin-left: 2em;
 }
@@ -38,24 +38,22 @@ header .left-side a{
     color: rgb(9, 248, 69);
     transition: .2s;
     font-weight: 500;
-    font-size: 1.1em;
+    font-size: 1.4em;
+    padding: 14px;
+    padding-bottom: 0.5em;
+    padding-top: 0.5em;
+    font-size: 1.4em;
+    text-transform: uppercase;
+    color: rgb(39, 223, 33);
+    border: none;
+    background-color: transparent;
+    transition: 0.3s;
 }
 header .left-side a:hover{
     color: aliceblue;
 }
 header .left-side {
     position: relative;
-}
-header .left-side a {
-    padding: 14px;
-    padding-bottom: 0.5em;
-    padding-top: 0.5em;
-    font-size: 20px;
-    text-transform: uppercase;
-    color: rgb(39, 223, 33);
-    border: none;
-    background-color: transparent;
-    transition: 0.3s;
 }
 header .left-side a::after {
     content: '';
@@ -87,7 +85,6 @@ header .left-side a:hover::after {
 header .left-side a:hover::before {
     width: 100%;
 }
-
 header .right-side{
     display: flex;
     margin-right: 2em;
@@ -98,27 +95,23 @@ header .right-side a{
     color: rgb(9, 248, 69);
     transition: .2s;
     font-weight: 500;
-    font-size: 1.1em;
-}
-header .right-side a:hover{
-    color: aliceblue;
-}
-header .right-side .welcomeList{
-    color: white;
-}
-header .right-side {
-    position: relative;
-}
-header .right-side a {
+    font-size: 1.4em;
     padding: 14px;
     padding-bottom: 0.5em;
     padding-top: 0.5em;
-    font-size: 20px;
+    font-size: 1.4em;
     text-transform: uppercase;
     color: rgb(39, 223, 33);
     border: none;
     background-color: transparent;
     transition: 0.3s;
+}
+header .right-side a:hover{
+    color: aliceblue;
+}
+header .right-side {
+    position: relative;
+
 }
 header .right-side a::after {
     content: '';
@@ -144,24 +137,24 @@ header .right-side a:hover {
     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px rgb(39, 223, 33),
         0 0 40px rgb(39, 223, 33), 0 0 50px rgb(39, 223, 33), 0 0 60px rgb(39, 223, 33), 0 0 70px rgb(39, 223, 33);
 }
-
 header .right-side a:hover::after {
     width: 100%;
 }
-
 header .right-side a:hover::before {
     width: 100%;
 }
 
+/* End of header section */
+
 /* Start of Main Welcome page */
 
-
 .main-text{
-    height: 73vh;
+    height: 100vh;
+    max-width: 100%;
 }
 .top-left{
     height: 36vh;
-    margin-top: 10em;
+    padding-top: 16em;
     margin-left: 10em;
 }
 .top-left p{
@@ -176,6 +169,7 @@ header .right-side a:hover::before {
 .bottom-right{
     height: 40vh;
     margin-left: 56em;
+    padding-top: 12em;
 }
 .bottom-right p{
     color: white;
@@ -188,9 +182,7 @@ header .right-side a:hover::before {
     border-radius: 75px;
 }
 
-
 /* Start of Introduction Page */
-
 
 #introductionPage{
     height: 100vh;
@@ -199,6 +191,32 @@ header .right-side a:hover::before {
     display: flex;
     justify-content: left;
     align-items: center;
+    position: relative;
+}
+.circle-tabs{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    left: 96%;
+}
+.circle-tabs i{
+    font-size: 1.2em;
+    padding: .2em;
+    color: white;
+    transition: .1s;
+}
+.circle-tabs i:hover{
+    color: #29d14d;
+}
+.circle-text{
+    color: white;
+    font-size: 1em; 
+}
+.home-tab-text{
+    display: none;
+    position: absolute;
+    left: 93.5%;
+    top: 43%;
 }
 .introText{
    color: white;
@@ -229,16 +247,46 @@ span:hover{
     border-bottom: 1px solid rgb(0, 218, 54);
     cursor: pointer;
 }
-
-
+#readBox{
+    position: absolute;
+    top: 20%;
+    left: 24%;
+    height: 40em;
+    width: 60em;
+    background-color: rgb(235, 235, 235);
+    display: none;
+    border-radius: 5px;
+    overflow: auto;
+    padding: 1.6em;
+    line-height: 2.8em;
+    z-index: 1001;
+}
+#readExit{
+    display: flex;
+    float: right;
+    padding: .4em .6em;
+    font-size: 1.4em;
+    border: none;
+    margin: .2em;
+    font-weight: 400;
+    cursor: pointer;
+    background-color: rgb(235, 235, 235);
+}
+.readText{
+    font-size: 1.4em;
+    width: 80%;
+    margin: 0 auto;
+}
+.read{
+    text-indent: 1.6em;
+    padding-top: .4em;
+}
 
 /* Start of Support Page */
-
 
 #supportPage{
     height: 100vh;
     max-width: 100%;
-    
 }
 
 /* Start of Background for Support page */
@@ -358,15 +406,13 @@ span:hover{
 
 }
 
-
 /* end of background for support section of page */
 
 /* Start of divs for support section */
 
-.items-container{
-    height: 80vh;
+#items-container{
+    height: 82vh;
     max-width: 90%;
-    
     display: flex;
     justify-content: center;
     margin: 0 auto;
@@ -389,8 +435,8 @@ span:hover{
     align-content: center;
     margin-left: 0.5em;
     margin-top: 4em;
+    position: relative;
 }
-
 .emergency-top-text{
     font-size: 3em;
 }
@@ -408,12 +454,13 @@ span:hover{
     padding-top: .6em;
 }
 
-
 /* emergency btn styling */
-
 
 .emergency-btn{
     padding: 3em 4em;
+}
+#exitBtn{
+    display: none;
 }
 .emergency-btn button{
     color: #fff;
@@ -425,7 +472,6 @@ span:hover{
     border: none;
     text-transform: uppercase;
 }
-
 .emergency-btn button::before {
     content: '';
     position: absolute;
@@ -437,7 +483,6 @@ span:hover{
     border-left: 5px solid rgb(39, 223, 33);
     transition: all 0.4s;
 }
-
 .emergency-btn button::after {
     content: '';
     position: absolute;
@@ -448,18 +493,14 @@ span:hover{
     border-bottom: 5px solid rgb(39, 223, 33);
     border-right: 5px solid rgb(39, 223, 33);
     transition: all 0.4s;
-    
 }
-
 .emergency-btn button:hover:before,
 .emergency-btn button:hover:after {
     width: 100%;
-    height: 100%;
-    
+    height: 100%; 
 }
 
 /* end of Emergency button */
-
 
 .standard-top-text{
     font-size: 3em;
@@ -468,7 +509,6 @@ span:hover{
     font-size: 1.3em;
     line-height: 1.4em;
     padding-top: 1em;
-    
 }
 .select-form-text{
     padding-top: 2em;
@@ -480,54 +520,35 @@ span:hover{
 
 .support-btn{
     padding: 3em 4em;
+    padding-bottom: 0em;
 }
 .support-btn button{
     color: #fff;
     font-size: 1.6rem;
-    padding: 1em 2.5em;
+    padding: 1em 2.0em;
     background-color: rgb(19, 97, 0);
     cursor: pointer;
     position: relative;
     border: none;
     text-transform: uppercase;
+    transition: .2s;
 }
-
-.support-btn button::before {
-    content: '';
-    position: absolute;
-    left: -10px;
-    top: -10px;
-    width: 40px;
-    height: 40px;
-    border-top: 5px solid rgb(39, 223, 33);
-    border-left: 5px solid rgb(39, 223, 33);
-    transition: all 0.4s;
+.support-btn button:hover{
+    color: greenyellow;
 }
-
-.support-btn button::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    right: -10px;
-    width: 40px;
-    height: 40px;
-    border-bottom: 5px solid rgb(39, 223, 33);
-    border-right: 5px solid rgb(39, 223, 33);
-    transition: all 0.4s;
-}
-
-.support-btn button:hover:before,
-.support-btn button:hover:after {
-    width: 100%;
-    height: 100%;
+.support-btn .fa-angle-down{
+    padding-left: .5em;
+    font-size: .8em;
+    color: greenyellow;
+    padding-bottom: .3em;
 }
 
 /* End of support btn styling */
 
-
 .request-top-text{
     font-size: 3em;
     margin-right: 6.2em;
+    margin-top: 1em;
 }
 .request-top-under{
     font-size: 1.3em;
@@ -548,7 +569,6 @@ span:hover{
     border: none;
     text-transform: uppercase;
 }
-
 .request-btn button::before {
     content: '';
     position: absolute;
@@ -560,7 +580,6 @@ span:hover{
     border-left: 5px solid rgb(39, 223, 33);
     transition: all 0.4s;
 }
-
 .request-btn button::after {
     content: '';
     position: absolute;
@@ -572,59 +591,283 @@ span:hover{
     border-right: 5px solid rgb(39, 223, 33);
     transition: all 0.4s;
 }
-
 .request-btn button:hover:before,
 .request-btn button:hover:after {
     width: 100%;
     height: 100%;
 }
 
-
 /* End of request btn styling */
 
-/* Start of bottom text in support page */
-
 .bottom-text{
-    
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 5em;
+    font-size: 1.2em;
+    cursor: pointer;
 }
 .bottom-text p{
     color: white;
     text-decoration: underline;
     font-weight: 600;
-    
+    cursor: pointer;
 }
 .bottom-text p a{
     text-decoration: white;
     cursor: pointer;
     color: rgb(0, 218, 54);
-    font-weight: 600;
+    font-weight: 600; 
+    padding-left: .2em;
+    padding-right: .2em;
+}
+#support-btn-hidden{
+    background-color: white;
+    margin-top: .4em;
+    padding: .4em 0em;
+    font-size: 1.6em;
+    display: none;
+    position: absolute;
+    top: 48%;
+    border-radius: 2px;
+    cursor: pointer;
+}
+#support-btn-hidden a{
+    text-decoration: none;
+    color: black;
+    padding: 0em;
+}
+#support-btn-hidden a p{
+    padding: .4em 1em;
+}
+#support-btn-hidden a p:hover{
+    background-color: rgb(241, 241, 241);
 }
 
 /* End of support page */
 
+/* Start of service page */
 
-
-#emergency-hidden{
-    position: absolute;
-    z-index: 1;
-    top: 30%;
-    left: 20%;
-    height: 30em;
-    width: 40em;
-    background-color: rgb(6, 112, 38);
-    display: none;
+#servicePage{
+    height: 100vh;
+    max-width: 100%;
+    background-color: #012201;
+    display: flex;
+    flex-direction: column;
 }
-#emergency-hidden button{
-    margin: .1em;
-    padding: .3em .9em;
-    font-size: 1.4em;
-    float: right;
-    background-color: black;
-    border: none;
-    cursor: pointer;
+.serviceInterior{
+    height: 100vh;
+    max-width: 100%;
+    margin-top: 8em;
+}
+
+    /* Start of Services Background */
+
+.hero {
+    background-color: #012201;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    font-family: "Montserrat", sans-serif;
+  }
+  .cube {
+    position: absolute;
+    top: 80vh;
+    left: 45vw;
+    width: 10px;
+    height: 10px;
+    border: solid 1px #17720b;
+    transform-origin: top left;
+    transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    -webkit-animation: cube 10s ease-in forwards infinite;
+    animation: cube 10s ease-in forwards infinite;
+  }
+  .cube:nth-child(2n) {
+    border-color: #29d14d;
+  }
+  .cube:nth-child(2) {
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+    left: 25vw;
+    top: 20vh;
+  }
+  .cube:nth-child(3) {
+    -webkit-animation-delay: 4s;
+    animation-delay: 4s;
+    left: 75vw;
+    top: 50vh;
+  }
+  .cube:nth-child(4) {
+    -webkit-animation-delay: 6s;
+    animation-delay: 6s;
+    left: 90vw;
+    top: 10vh;
+  }
+  .cube:nth-child(5) {
+    -webkit-animation-delay: 8s;
+    animation-delay: 8s;
+    left: 10vw;
+    top: 85vh;
+  }
+  .cube:nth-child(6) {
+    -webkit-animation-delay: 10s;
+    animation-delay: 10s;
+    left: 50vw;
+    top: 10vh;
+  }
+  .cube:nth-child(7) {
+    -webkit-animation-delay: 4s;
+    animation-delay: 4s;
+    left: 90vw;
+    top: 80vh;
+  }
+  @-webkit-keyframes cube {
+    from {
+      transform: scale(0) rotate(0deg) translate(-50%, -50%);
+      opacity: 1;
+    }
+    to {
+      transform: scale(20) rotate(960deg) translate(-50%, -50%);
+      opacity: 0;
+    }
+  }
+  @keyframes cube {
+    from {
+      transform: scale(0) rotate(0deg) translate(-50%, -50%);
+      opacity: 1;
+    }
+    to {
+      transform: scale(20) rotate(960deg) translate(-50%, -50%);
+      opacity: 0;
+    }
+  }
+
+    /* End of services background */
+
+    /* start of services page */
+.service-title{
+    height: 5em;
+    max-width: 100%;
+    padding-top: 6em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.service-title p{
+    font-size: 5em;
     color: white;
 }
+.service-boxes{
+    height: 20em;
+    max-width: 100%;
+    margin-top: 8em;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+.service-boxes .box{
+    height: 20em;
+    width: 20em;
+    background-color: rgb(19, 19, 19);
+    margin: 1.4em;
+    z-index: 1001;
+    box-shadow: 0px 0px 2px 3px rgb(15, 201, 71);
+    transition: .2s;
+}
+.service-boxes .box:hover{
+    box-shadow: 0px 0px 10px 5px rgb(15, 201, 71);
+    transform: scale(1.05);
+}
+.icon{
+    height: 2em;
+    color: white;
+    font-size: 2em;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    margin-top: .5em;
+    padding-right: 8.4em;
+    color: #46f36c;
+}
+.service-top{
+    height: 2em;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 5.9em;
+    padding-top: 1em;
+}
+.service-top p{
+    font-size: 1.6em;
+    color: white;
+    text-transform: uppercase;
+}
+.service-desc{
+    padding-top: 2em;
+    max-width: 90%;
+    margin: 0 auto;
+}
+.service-desc p{
+    color: white;
+    font-size: 1.1em;
+    font-weight: 200;
+}
+.service-cost-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6em;
+}
+.service-cost-btn button{
+    padding: .4em 1.4em;
+    font-size: 1.4em;
+    background-color: transparent;
+    border: none;
+    color: #29d14d;
+    cursor: pointer;
+    padding-left: 8em;
+}
+.service-cost-btn button:hover{
+    padding: .4em 1.4em;
+    font-size: 1.4em;
+    background-color: transparent;
+    border: none;
+    color: #65ec83;
+    cursor: pointer;
+    padding-left: 8em; 
+}
+.fa-windows{
+    padding-left: .5em;
+}
+.box2-top-text{
+    padding-right: 11em;
+}
+.fa-print{
+    padding-left: .5em;
+}
+.box3-top-text{
+    padding-right: 11.6em;
+}
+.remote-links{
+    padding-top: 1em;
+}
+.remote-links a{
+    display: flex;
+    padding: .2em;
+    justify-content: center;
+    color: #29d14d;
+    font-size: 1.2em;
+}
+.remote-links a:hover{
+    color: #46f36c;
+}
+.fa-house-laptop{
+    padding-left: .6em;
+}
+.box4-top-text{
+    padding-right: 7.2em;
+}
+
+
+/* End of styles sheet */

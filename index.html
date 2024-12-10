@@ -6,9 +6,13 @@
     <title>LRI Computing Services</title>
     <link rel="stylesheet" href="styles.css">
 
+    <!-- code for text fonts & icons -->
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,27 +23,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-    
-    <div id="main-container">
-        <div id="main-img">
-            
-        
+    <!-- main container section front page -->
+    <section id="main-container" >
+        <!-- added scrolli library for one full page scroll -->
+        <section id="firstPage" class="scrolli">
+            <!-- first page header  -->
             <header>
                 <div class="left-side">
-                    <a href="index.html"><p class="home">Home</p></a>
-                    <a href="#"><p class="team">Our Team</p></a>
+                    <a href="#firstPage"><p class="home">Home</p></a>
+                    <a href="http://computing.lerner.ccf.org/team/" target="_blank"><p class="team">Our Team</p></a>
                 </div>
                 <div class="right-side">
-                    <a href="index.html"><p class="welcomeList">Welcome</p></a>
+                    <a href="#firstPage"><p class="welcomeList">Welcome</p></a>
                     <a href="#introductionPage"><p class="introductionList">Introduction</p></a>
                     <a href="#supportPage"><p class="supportList">Support</p></a>
-                    <a href="#"><p class="servicesList">Services</p></a>
-                    <a href="#"><p class="statsList">Stats</p></a>
+                    <a href="#servicePage"><p class="servicesList">Services</p></a>
+                    
                 </div>
             </header>
-            
-            
-            <section class="main-text" >
+            <!-- the text infront of first page -->
+            <section class="main-text"  >
                 <div class="top-left" data-aos="fade-right"  data-aos-duration="1500">
                     <p>Lerner Research Institute</p>
                 </div>
@@ -47,8 +50,10 @@
                     <p>Computing Services</p>
                 </div>
             </section>
-        </div>
-        <section id="introductionPage" data-tilt>
+            
+        </section>
+        <!-- Introduction page that showcases intro to our department -->
+        <section id="introductionPage" class="scrolli">
             <div class="introText">
                 <div class="intro-top-text" data-aos="fade-right"  data-aos-duration="1000">
                     <p>LRICS is comprised of 21 information technology specialists<br> 
@@ -62,12 +67,33 @@
                         environment, housed in the Cleveland Clinic Tier III
                         data center, is monitored<br> continuously by automated
                         systems implemented at the enterprise level and<br> 
-                        specifically within the Lerner Research Institute <span>read more</span>.</p>
+                        specifically within the Lerner Research Institute <span id="readBtn">read more</span>.</p>
                 </div>
             </div>
-        </section>
+            <!-- read more box that showcases more info about our department -->
+            <div id="readBox">
+                <div class="readBtnDiv">
+                    <button id="readExit">X</button>
+                </div>
+                
+                    <div class="readTextDiv">
 
-        <section id="supportPage">
+                    
+                        <p class="readText read">The Lerner Research Institute Computing Services (LRICS) group provides support for the desktop, server, and network-computing infrastructure of the Institute. LRICS is comprised of 21 information technology specialists providing server support, special project support and custom support of the desktop in biomedical and clinical research. The combined supported user base is greater than 2,000. Platforms supported include Windows, Macintosh and the Unix / Linux operating systems. The server environment, housed in the Cleveland Clinic Tier III data center, is monitored continuously by automated systems implemented at the enterprise level and specifically within the Lerner Research Institute. The Cleveland Clinic employs a defense in depth security model with multiple levels of advanced network- and host-based security.<br></p>
+
+                        <p class="readText read">The Lerner Research Institute provides access to five petabytes (usable) of network-attached storage. The data storage system is replicated from primary Dell-EMC Isilon grid storage nodes in the Tier III Cleveland Clinic data center in Brecksville, Ohio to secondary nodes in the Tier II Cleveland Clinic data center in Beachwood, Ohio. A large tape library provides additional backup services where required; offsite storage of cloned tapes is provide by contract services with Iron Mountain.<br></p>
+                            
+                        <p class="readText read">Various internal and external resources for data analysis can be provisioned to meet the specific needs of the investigators in the Lerner Research Institute. The Lerner Research Institute provides a high performance compute cluster (expansion in process to 1200 cores with immediate capacity to exceed 2000 cores). A 270 terabyte Intel Enterprise Edition Lustre scalable file system (expansion in process to >500 terabytes) is integrated into the cluster’s InfiniBand backplane. Connectivity of the cluster to the Cleveland Clinic network backbone and directly to the replicated grid storage is provided by multiple 10 gigabit / sec uplinks. An extensive suite of analytic and development tools are available on the HPC and other processing resources, including an R environment and a dedicated 16 core SAS for Linux server. Investigators also have access to an Enterprise SAS Grid Engine / Teradata analytic system. Oracle, Microsoft SQL server and MySQL database capability is provided and maintained by two DBAs and a team of systems administrators. Compute services are also available from the Ohio Supercomputer Center.<br></p>
+                            
+                        <p class="readText read">Basic network service to desktop computers is 100 Mbps Ethernet, with 1 Gbps Ethernet available where needed. Backbone services within the Lerner Research Institute and between the Lerner Research Institute and the Tier III Cleveland Clinic data center operate at 10 Gbps. A standard Internet uplink is provided institutionally via redundant 10 Gbs links and a 10 Gbs connection to an Internet II point of presence is also available to investigators.</p>
+                    </div>
+            </div>
+                    
+            
+        </section>
+        <!-- support page that discusses emergency requests and standard requests -->
+        <section id="supportPage" class="scrolli">
+            <!-- background of support page -->
             <div class="area" >
                 <ul class="circles">
                         <li></li>
@@ -81,13 +107,14 @@
                         <li></li>
                         <li></li>
                 </ul>
-            
-                <div class="items-container">
+                <!-- code for emergency request button that shows a popup when clicked -->
+                <div id="items-container">
 
-                    <div id="emergency-hidden">
-                        <button id="exitBtn">X</button>
+                    <div  id="emergency-hidden">
+                        <button id="exitBtn"></button>
+                        <div class="text-div"></div>
                     </div>
-
+                    <!-- left side code for support page -->
                     <div class="support-left-side" data-aos="fade-right" data-aos-duration="1000">
                         <div class="emergency-text">
                             <p class="emergency-top-text">Emergency Support Requests</p>
@@ -101,33 +128,130 @@
                                 <li>Out of storage space on a network share.</li>
                             </ul>
                         </div>
-                        <div class="emergency-btn">
-                            <button id="emergencyBtn">Submit Emergency Request</button>
+                        <div class="emergency-btn" >
+                            <button id="emergencyBtn" >Submit Emergency Request</button>
                         </div>
                     </div>
+                    <!-- right side code for support page -->
                     <div class="support-right-side" data-aos="fade-left" data-aos-duration="1000">
                         <div class="standard-text">
                             <p class="standard-top-text">Standard Support Requests</p>
                             <p class="standard-top-under">Usually used for installations of new computers, software, hardware, upgrades and computer moves.<br> Problems with printers, remote access, desktop configuration, application settings.</p>
                             <p class="select-form-text">Please select the appropriate support form from below:</p>
                         </div>
-                        <div class="support-btn">
-                            <button>Support Forms</button>
+                        <!-- support froms button -->
+                        <div class="support-btn" id="supportBtn">
+                            <button>Support Forms<i class="fa-solid fa-angle-down"></i></button>
+                        </div>
+                        <!-- popup shown when you click support forms -->
+                        <div id="support-btn-hidden">
+                            <a onclick="openEducationTab()"><p>Education Support Request Form</p></a>
+                            <a onclick="openLriTab()"><p>LRI Support Request Form</p></a>
+                            <a onclick="openQhsTab()"><p>QHS Support Request Form</p></a>
                         </div>
                         <div class="request-text">
                             <p class="request-top-text">Standard Request Tracking</p>
                             <p class="request-top-under">Follow the link below to check the status of your standard support request.</p>
                         </div>
+                        <!-- request button when you click track requests. -->
                         <div class="request-btn">
-                          <button>Track Request</button>
+                          <a href="http://computing.lerner.ccf.org/track/" target="_blank"><button>Track Request</button></a>
                         </div>
                     </div>
+                    
                 </div>
+                <!-- bottom text on support page for contact information -->
                 <div class="bottom-text">
-                    <p>Please do not contact anyone directly. Please send all non-urgent problems or questions to <a href="mailto:support@ccf.org">support@ccf.org</a>. They will go to a mailbox shared by LRICS management. A team responds to the emails. For urgent problems, call the LRICS hotline at 216.445.2170.</p>
+                    <p>Please do not contact anyone directly. Please send all non-urgent problems or questions to  <a href="mailto:support@ccf.org"> support@ccf.org.</a> They will go to a mailbox shared by LRICS management. A team responds to the emails. For urgent problems, call the LRICS hotline at 216.445.2170.</p>
                 </div>
             </div>
         </section>
+        <!-- start of service page -->
+        <section id="servicePage" class="scrolli">
+            <!-- start of background -->
+            <div class="hero"> 
+                <div class="cube"></div>
+                <div class="cube"></div>
+                <div class="cube"></div>
+                <div class="cube"></div>
+                <div class="cube"></div>
+                <div class="cube"></div>
+                <div class="cube"></div>
+                <!-- end of background -->
+                 <!-- title of services page -->
+                <div class="serviceInterior">
+                    <div class="service-title" data-aos="fade-right" data-aos-duration="1000">
+                        <p>Our Services</p>
+                    </div>
+                    <!-- first box describing cost of services -->
+                    <div class="service-boxes" data-aos="zoom-in" data-aos-duration="1000">
+                        <div class="box box1">
+                            <div class="icon">
+                                <i class="fa-solid fa-dollar-sign"></i>
+                            </div>
+                            <div class="box1-top-text service-top">
+                                <p>Cost of Services</p>
+                            </div>
+                            <div class="service-desc">
+                                <p>This includes Fixed Costs, Desktop Support, OS Installs, OS Updates, Computer Moves and Vendor Assistance.</p>
+                            </div>
+                            <div class="service-cost-btn">
+                                <a href="http://computing.lerner.ccf.org/costs/" target="_blank"><button>Read more</button></a>
+                            </div>
+                        </div>
+                        <!-- second box describing software -->
+                        <div class="box box2">
+                            <div class="icon">
+                                <i class="fa-brands fa-windows"></i>
+                            </div>
+                            <div class="box2-top-text service-top">
+                                <p>Software</p>
+                            </div>
+                            <div class="service-desc">
+                                <p>We carry Microsoft Windows, Apple Macintosh, and NoMAD Software<br> Titles. To meet the needs for everyone.</p>
+                            </div>
+                            <div class="service-cost-btn">
+                                <a href="http://computing.lerner.ccf.org/software/" target="_blank"><button>Read more</button></a>
+                            </div>
+                        </div>
+                        <!-- third box describing printing -->
+                        <div class="box box3">
+                            <div class="icon">
+                                <i class="fa-solid fa-print"></i>
+                            </div>
+                            <div class="box3-top-text service-top">
+                                <p>Printing</p>
+                            </div>
+                            <div class="service-desc">
+                                <p>We offer technical support for printers. This includes Windows (7, 10 and 11).<br> We also support Mac and Linux users.</p>
+                            </div>
+                            <div class="service-cost-btn">
+                                <a href="http://computing.lerner.ccf.org/printing/" target="_blank"><button>Read more</button></a>
+                            </div>
+                        </div>
+                        <!-- fourth box describing remote access and links -->
+                        <div class="box box4">
+                            <div class="icon">
+                                <i class="fa-solid fa-house-laptop"></i>
+                            </div>
+                            <div class="box4-top-text service-top">
+                                <p>Remote Access</p>
+                            </div>
+                            <div class="service-desc">
+                                <p>Remote Access Links for Lerner, CC, and Symantec Registration Instructions.</p>
+                            </div>
+                            <div class="remote-links">
+                                <a href="http://computing.lerner.ccf.org/home/documents/Lerner%20Cisco%20AnyConnect%20Instructions.pdf" target="_blank">Lerner Users</a>
+                                <a href="http://computing.lerner.ccf.org/home/documents/AnyConnectInstructions.pdf" target="_blank">CC Users</a>
+                                <a href="https://www.lerner.ccf.org/cores/computing-services/documents/SymantecVIPAccessRegistration.pdf" target="_blank">Symantec Registration Instructions</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
 
 
 
@@ -137,20 +261,18 @@
 
 
 
+    </section>
 
-    </div>
-
-
-    <!-- Script code for Anime API -->
-    <script src="anime.min.js"></script>
+    
+    <!-- Script code for PopUp API -->
+    <script src="https://cdn.jsdelivr.net/npm/@simondmc/popup-js@1.4.3/popup.min.js"></script>
 
     <!-- Script code for Jquery -->
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     
     
     <script src="jquery.js" ></script> <!-- Load jQuery first -->
-    <script src="tilt.js"></script> <!-- Load Tilt.js library -->
-    <script src="tilt.jquery.js"></script>
+
 
 
     <!-- Link to app.js File -->
@@ -230,7 +352,20 @@
     </script>
     
 
-
     
+    <script
+        src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.21/jquery.scrollify.min.js" integrity="sha512-UyX8JsMsNRW1cYl8BoxpcamonpwU2y7mSTsN0Z52plp7oKo1u92Xqfpv6lOlTyH3yiMXK+gU1jw0DVCsPTfKew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(function() {
+            $.scrollify({
+                section: ".scrolli",
+            });
+        });
+    </script>
+
 </body>
 </html>
